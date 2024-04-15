@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H1>CALCULATOR</H1>
+    <div>
+         <form action="" method="post">
+           NUM1: <input type="textbox" id="num1"></form></br>
+           NUM2: <input type="textbox" id="num2"></form></br>
+           opr <input type="textbox" id="opr"></form></br>
+           <button name="submit" onclick="calculate()">submit</button>
+           <h6>RESULT</h6>
+           <h2 id="demo"></h2>
+</form>
+ <script>
+    
+function calculate(){
+    let num1=+document.getElementById("num1").value;
+    let num2=+document.getElementById("num2").value;
+    let opr=document.getElementById("opr").value;
+    console.log(num1);
+    console.log(num2);
+    var x=0;
+   switch(opr)
+{
+    case("+"):{
+        x=num1+num2;
+        break;
+    }
+    case("-"):{
+        x= num1-num2;
+        break;
+    }
+    case("*"):{
+        x= num1*num2;
+        break;
+    }
+    case("/"):{
+     x= num1/num2;
+        break;
+    }
+    default:{
+        x= "enter valid operator";
+    
+    }
+ }
+
+console.log(x);
+document.getElementById("demo").innerHTML="result is"+x;
+}
+
+
+ </script>
+
+ </div>
+</body>
+</html>
